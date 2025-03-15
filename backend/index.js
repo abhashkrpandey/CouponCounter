@@ -34,7 +34,7 @@ app.use(
     })
 );
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173",process.env.CLIENT_URL];
 app.use(cors({
     origin: allowedOrigins,
     methods: ["GET", "POST", "DELETE", "PUT"],
